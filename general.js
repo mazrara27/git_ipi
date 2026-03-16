@@ -1,3 +1,11 @@
+// 1. CHARGEMENT DU HEADER
+fetch('header.html')
+    .then(response => response.text()) // On récupère du texte (HTML), pas du JSON
+    .then(html => {
+        // On injecte le code HTML dans la balise qui a l'id "header-placeholder"
+        document.getElementById('header-placeholder').innerHTML = html;
+    })
+    .catch(error => console.error('Erreur lors du chargement du header:', error));
 // general.js
 fetch('config.json')
     .then(response => response.json())
