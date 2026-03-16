@@ -4,71 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Mon Portfolio</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        background-color: #f9f9f9;
-        color: #333;
-      }
-      header {
-        background-color: #2c3e50;
-        padding: 1rem 0;
-      }
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      nav a:hover {
-        text-decoration: underline;
-      }
-      main {
-        flex: 1;
-        padding: 2rem;
-        max-width: 1000px;
-        margin: 0 auto;
-        width: 100%;
-        box-sizing: border-box;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-      }
-      section.card {
-        background: white;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
-      img {
-        max-width: 100%;
-        border-radius: 5px;
-        height: 200px;
-        object-fit: cover;
-      }
-      footer {
-        background-color: #2c3e50;
-        color: white;
-        text-align: center;
-        padding: 1rem 0;
-        margin-top: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="general.css" />
   </head>
   <body>
     <header>
@@ -84,8 +20,8 @@
       </nav>
     </header>
 
-    <main>
-      <h1>Mes Projets et Hobbies</h1>
+    <main class="main-large">
+      <h1>Les Projets de <span class="data-prenom">...</span></h1>
       <p>
         Découvrez mes <strong>6 centres d'intérêt</strong> principaux à travers
         ces différentes cartes.
@@ -103,7 +39,6 @@
             HTML et CSS.
           </p>
         </section>
-
         <section class="card">
           <h3>Sport : Randonnée</h3>
           <img
@@ -115,7 +50,6 @@
             écrans.
           </p>
         </section>
-
         <section class="card">
           <h3>Hobby : Photographie</h3>
           <img
@@ -127,7 +61,6 @@
             spontanés.
           </p>
         </section>
-
         <section class="card">
           <h3>Projet Fictif : Application Mobile</h3>
           <img
@@ -139,7 +72,6 @@
             personnelle.
           </p>
         </section>
-
         <section class="card">
           <h3>Centre d'intérêt : Lecture</h3>
           <img
@@ -151,7 +83,6 @@
             philosophiques.
           </p>
         </section>
-
         <section class="card">
           <h3>Musique : Guitare</h3>
           <img
@@ -167,7 +98,12 @@
     </main>
 
     <footer>
-      <p>&copy; 2026 Reda Mazrara</p>
+      <p>
+        &copy; <span class="data-annee">...</span>
+        <span class="data-prenom">...</span> <span class="data-nom">...</span>
+      </p>
     </footer>
+
+    <script src="general.js"></script>
   </body>
 </html>

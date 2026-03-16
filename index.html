@@ -4,76 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil | Mon Portfolio</title>
-    <style>
-      /* --- STYLES GLOBAUX PARTAGÉS --- */
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f7f6;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Permet de coller le footer en bas */
-      }
-
-      /* En-tête et Navigation */
-      header {
-        background-color: #2c3e50;
-        padding: 1rem 0;
-      }
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 8px 15px;
-        border-radius: 5px;
-        transition: 0.3s;
-      }
-      nav a:hover {
-        background-color: #3498db;
-      }
-
-      /* Contenu principal */
-      main {
-        flex: 1; /* Remplit l'espace central */
-        padding: 3rem 1rem;
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      /* Pied de page */
-      footer {
-        background-color: #2c3e50;
-        color: white;
-        text-align: center;
-        padding: 1rem 0;
-        margin-top: auto;
-      }
-
-      /* Styles spécifiques à l'accueil */
-      .profile-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      }
-      .subtitle {
-        color: #3498db;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-    </style>
+    <link rel="stylesheet" href="general.css" />
   </head>
   <body>
     <header>
@@ -90,19 +21,32 @@
     </header>
 
     <main>
-      <div class="profile-card">
-        <h1>Bonjour, je suis Reda mazrara</h1>
-        <p class="subtitle">Développeur / Étudiant / Passionné</p>
+      <section>
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <h2>Présentation</h2>
         <p>
-          Bienvenue sur mon espace personnel. Je me spécialise dans
-          l'Informatique et j'aime créer des solutions innovantes. Utilisez le
-          menu ci-dessus pour naviguer sur mon site !
+          Bonjour ! Je m'appelle
+          <strong
+            ><span class="data-prenom">...</span>
+            <span class="data-nom">...</span></strong
+          >. Je suis un passionné de nouvelles technologies et je me spécialise
+          en tant que <strong class="data-metier">...</strong>.
         </p>
-      </div>
+        <p>
+          Ce site regroupe mon parcours professionnel, mes projets personnels
+          ainsi que mes divers centres d'intérêt. N'hésitez pas à parcourir les
+          différentes pages via le menu ci-dessus.
+        </p>
+      </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 Reda mazrara - Tous droits réservés.</p>
+      <p>
+        &copy; <span class="data-annee">...</span>
+        <span class="data-prenom">...</span> <span class="data-nom">...</span>
+      </p>
     </footer>
+
+    <script src="general.js"></script>
   </body>
 </html>

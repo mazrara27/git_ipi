@@ -4,90 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Mon Portfolio</title>
-    <style>
-      /* Styles globaux */
-      body {
-        font-family: "Segoe UI", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f7f6;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-      header {
-        background-color: #2c3e50;
-        padding: 1rem 0;
-      }
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 8px 15px;
-        border-radius: 5px;
-        transition: 0.3s;
-      }
-      nav a:hover {
-        background-color: #3498db;
-      }
-      footer {
-        background-color: #2c3e50;
-        color: white;
-        text-align: center;
-        padding: 1rem 0;
-        margin-top: auto;
-      }
-
-      main {
-        flex: 1;
-        padding: 2rem;
-        max-width: 600px;
-        margin: 0 auto;
-        width: 100%;
-        box-sizing: border-box;
-      }
-
-      /* Styles spécifiques au formulaire */
-      .form-container {
-        background: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        border-top: 4px solid #e67e22;
-      }
-      input,
-      textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-sizing: border-box;
-      }
-      button {
-        background-color: #e67e22;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        width: 100%;
-      }
-      button:hover {
-        background-color: #d35400;
-      }
-    </style>
+    <link rel="stylesheet" href="general.css" />
   </head>
   <body>
     <header>
@@ -104,25 +21,25 @@
     </header>
 
     <main>
-      <div class="form-container">
-        <h2>Me Contacter</h2>
-        <form action="#" method="POST">
-          <label for="name">Nom</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit">Envoyer</button>
-        </form>
-      </div>
+      <section>
+        <h1>Me Contacter</h1>
+        <h2>Informations de contact</h2>
+        <p>Vous souhaitez me poser une question ou discuter d'un projet ?</p>
+        <p>
+          Pour le moment, vous pouvez me joindre directement à l'adresse e-mail
+          suivante : <strong class="data-email">...</strong>.
+        </p>
+        <p>Je m'efforce de répondre dans les plus brefs délais.</p>
+      </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 Reda Mazrara - Tous droits réservés.</p>
+      <p>
+        &copy; <span class="data-annee">...</span>
+        <span class="data-prenom">...</span> <span class="data-nom">...</span>
+      </p>
     </footer>
+
+    <script src="general.js"></script>
   </body>
 </html>

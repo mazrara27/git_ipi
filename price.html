@@ -4,81 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tarifs | Mon Portfolio</title>
-    <style>
-      /* Styles globaux */
-      body {
-        font-family: "Segoe UI", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f7f6;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-      header {
-        background-color: #2c3e50;
-        padding: 1rem 0;
-      }
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-      }
-      nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 8px 15px;
-        border-radius: 5px;
-        transition: 0.3s;
-      }
-      nav a:hover {
-        background-color: #3498db;
-      }
-      footer {
-        background-color: #2c3e50;
-        color: white;
-        text-align: center;
-        padding: 1rem 0;
-        margin-top: auto;
-      }
-
-      main {
-        flex: 1;
-        padding: 2rem;
-        max-width: 900px;
-        margin: 0 auto;
-        width: 100%;
-        text-align: center;
-      }
-
-      /* Styles de la grille de prix */
-      .pricing-flex {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin-top: 2rem;
-      }
-      .price-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 10px;
-        width: 250px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        border-top: 4px solid #9b59b6;
-      }
-      .price-card ul {
-        text-align: left;
-        color: #7f8c8d;
-        padding-left: 20px;
-      }
-    </style>
+    <link rel="stylesheet" href="general.css" />
   </head>
   <body>
     <header>
@@ -95,35 +21,34 @@
     </header>
 
     <main>
-      <h1>Grille de Tarifs</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-      <div class="pricing-flex">
-        <div class="price-card">
-          <h2>Standard</h2>
-          <h3 style="color: #9b59b6; font-size: 2rem; margin: 0">19€</h3>
-          <ul>
-            <li>Lorem ipsum dolor</li>
-            <li>Sit amet consectetur</li>
-            <li>Adipiscing elit sed</li>
-          </ul>
-        </div>
-
-        <div class="price-card">
-          <h2>Premium</h2>
-          <h3 style="color: #9b59b6; font-size: 2rem; margin: 0">49€</h3>
-          <ul>
-            <li>Lorem ipsum dolor</li>
-            <li>Sit amet consectetur</li>
-            <li>Adipiscing elit sed</li>
-            <li>Do eiusmod tempor</li>
-          </ul>
-        </div>
-      </div>
+      <section>
+        <h1>Mes Tarifs</h1>
+        <h2>Grille de prestations</h2>
+        <p>
+          Mes tarifs varient en fonction de la complexité de votre demande et
+          des technologies requises.
+        </p>
+        <p>
+          À titre indicatif, mon taux journalier moyen (TJM) débute à
+          <strong>350€ / jour</strong>. Pour une création de site vitrine
+          simple, les forfaits commencent aux alentours de
+          <strong>1200€</strong>.
+        </p>
+        <p>
+          N'hésitez pas à me contacter via l'adresse
+          <strong class="data-email">...</strong> pour obtenir un devis
+          personnalisé.
+        </p>
+      </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 Reda Mazrara - Tous droits réservés.</p>
+      <p>
+        &copy; <span class="data-annee">...</span>
+        <span class="data-prenom">...</span> <span class="data-nom">...</span>
+      </p>
     </footer>
+
+    <script src="general.js"></script>
   </body>
 </html>
