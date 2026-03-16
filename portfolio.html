@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Mon Portfolio</title>
     <style>
-      /* Styles globaux */
       body {
-        font-family: "Segoe UI", sans-serif;
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f7f6;
-        color: #333;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        background-color: #f9f9f9;
+        color: #333;
       }
       header {
         background-color: #2c3e50;
@@ -27,18 +26,40 @@
         display: flex;
         justify-content: center;
         gap: 15px;
-        flex-wrap: wrap;
       }
       nav a {
         color: white;
         text-decoration: none;
         font-weight: bold;
-        padding: 8px 15px;
-        border-radius: 5px;
-        transition: 0.3s;
       }
       nav a:hover {
-        background-color: #3498db;
+        text-decoration: underline;
+      }
+      main {
+        flex: 1;
+        padding: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+      section.card {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 5px;
+        height: 200px;
+        object-fit: cover;
       }
       footer {
         background-color: #2c3e50;
@@ -46,34 +67,6 @@
         text-align: center;
         padding: 1rem 0;
         margin-top: auto;
-      }
-
-      main {
-        flex: 1;
-        padding: 2rem;
-        max-width: 900px;
-        margin: 0 auto;
-        width: 100%;
-        box-sizing: border-box;
-      }
-
-      /* Styles spécifiques au Portfolio */
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-      }
-      .card {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        border-top: 4px solid #2ecc71;
-        text-align: center;
-      }
-      .card h3 {
-        color: #27ae60;
-        margin-top: 0;
       }
     </style>
   </head>
@@ -92,28 +85,89 @@
     </header>
 
     <main>
-      <h1 style="text-align: center">Mes Centres d'Intérêt</h1>
+      <h1>Mes Projets et Hobbies</h1>
+      <p>
+        Découvrez mes <strong>6 centres d'intérêt</strong> principaux à travers
+        ces différentes cartes.
+      </p>
+
       <div class="grid">
-        <div class="card">
-          <h3>🎮 Jeux video</h3>
+        <section class="card">
+          <h3>Projet Web : Site Vitrine</h3>
+          <img
+            src="https://picsum.photos/id/1/300/200"
+            alt="Ordinateur sur un bureau montrant du code"
+          />
           <p>
-            Passionné de jeux vidéo comme par exemple minecraft qui est un jeux
-            d'exploration et de survie
+            Création d'un site complet pour une association locale utilisant
+            HTML et CSS.
           </p>
-        </div>
-        <div class="card">
-          <h3>📸 Photographie</h3>
-          <p>Passionné par la photographie de paysages et de portraits.</p>
-        </div>
-        <div class="card">
-          <h3>🌍 Voyages</h3>
-          <p>Découverte de nouvelles cultures. Plus de 4 pays visités.</p>
-        </div>
+        </section>
+
+        <section class="card">
+          <h3>Sport : Randonnée</h3>
+          <img
+            src="https://picsum.photos/id/10/300/200"
+            alt="Paysage de montagne avec forêt"
+          />
+          <p>
+            J'adore explorer la nature le week-end pour me ressourcer loin des
+            écrans.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3>Hobby : Photographie</h3>
+          <img
+            src="https://picsum.photos/id/250/300/200"
+            alt="Appareil photo posé sur une surface en bois"
+          />
+          <p>
+            Passionné par la capture de paysages urbains et de portraits
+            spontanés.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3>Projet Fictif : Application Mobile</h3>
+          <img
+            src="https://picsum.photos/id/3/300/200"
+            alt="Téléphone portable affichant une application"
+          />
+          <p>
+            Maquette d'une application de gestion du temps et de productivité
+            personnelle.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3>Centre d'intérêt : Lecture</h3>
+          <img
+            src="https://picsum.photos/id/24/300/200"
+            alt="Livre ouvert avec des lunettes posées dessus"
+          />
+          <p>
+            Grand amateur de romans de science-fiction et d'essais
+            philosophiques.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3>Musique : Guitare</h3>
+          <img
+            src="https://picsum.photos/id/145/300/200"
+            alt="Une guitare acoustique posée sur une chaise"
+          />
+          <p>
+            Je joue de la guitare acoustique depuis plus de 5 ans pour me
+            détendre.
+          </p>
+        </section>
       </div>
     </main>
 
     <footer>
-      <p>&copy; 2026 Reda Mazrara - Tous droits réservés.</p>
+      <p>&copy; 2026 Reda Mazrara</p>
     </footer>
   </body>
 </html>
