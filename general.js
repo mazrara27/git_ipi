@@ -19,24 +19,37 @@ fetch('config.json')
     .catch(error => console.error('Erreur lors du chargement des données:', error));
 
 // 3. GESTION DU FORMULAIRE DE CONTACT
-// On cherche d'abord si le formulaire existe sur la page actuelle
 const formulaireContact = document.getElementById('contact-form');
 
-// Si le formulaire existe (donc on est sur la page contact.html), on applique le code
 if (formulaireContact) {
-    formulaireContact.addEventListener('submit', function(event) {
-        event.preventDefault(); // Empêche le rechargement de la page
+    
+    // --- NOUVEAU : Pré-remplissage du message selon l'URL ---
+    const urlParams = new URLSearchParams(window.location.search);
+    const offreChoisie = urlParams.get('offre');
+    const champMessage = document.getElementById('message');
 
-        // Récupération des données du formulaire
+    if (offreChoisie && champMessage) {
+        if (offreChoisie === 'classic') {
+            champMessage.value = "Bonjour, je suis intéressé(e) par l'Offre Classic à 50€. Pourrions-nous en discuter ?";
+        } else if (offreChoisie === 'pro') {
+            champMessage.value = "Bonjour, je suis intéressé(e) par l'Offre Pro à 100€. Pourrions-nous en discuter ?";
+        } else if (offreChoisie === 'ultra') {
+            champMessage.value = "Bonjour, je souhaite obtenir un devis pour l'Offre Ultra Pro. Voici mon projet : ";
+        }
+    }
+    // --------------------------------------------------------
+
+    // Gestion de l'envoi du formulaire
+    formulaireContact.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
         const formData = new FormData(this);
         const nom = formData.get('nom');
         const email = formData.get('email');
         const message = formData.get('message');
 
-        // Création du contenu du fichier texte
         const contenuFichier = `Date d'envoi: ${new Date().toLocaleString('fr-FR')}\n\nNom: ${nom}\nEmail: ${email}\n\nMessage:\n${message}`;
 
-        // Formatage de la date pour le nom du fichier
         const now = new Date();
         const dateStr = now.getFullYear() + "-" + 
                         String(now.getMonth() + 1).padStart(2, '0') + "-" + 
@@ -47,7 +60,6 @@ if (formulaireContact) {
         
         const nomFichier = `contact_${dateStr}.txt`;
 
-        // Logique de création et téléchargement du fichier
         const blob = new Blob([contenuFichier], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
 
@@ -57,11 +69,9 @@ if (formulaireContact) {
         document.body.appendChild(a);
         a.click(); 
         
-        // Nettoyage de la mémoire et de la page
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
         
-        // Vider le formulaire et confirmer
         this.reset();
         alert('Votre message a été généré sous forme de fichier !');
     });

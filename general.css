@@ -126,3 +126,87 @@ img {
 .btn-submit:hover {
     background-color: #1a252f;
 }
+
+/* --- Styles pour les cartes de Services/Tarifs --- */
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pousse le bouton vers le bas */
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Mise en valeur de l'offre centrale */
+.pricing-card.highlight {
+    border: 2px solid #2c3e50;
+    transform: scale(1.05); /* La rend légèrement plus grande */
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-card.highlight::before {
+    content: "Le plus populaire";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2c3e50;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.pricing-card.highlight:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.prix {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 15px 0;
+}
+
+.description-offre {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+    min-height: 50px; /* Aligne le texte si les descriptions n'ont pas la même taille */
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    text-align: left;
+    flex-grow: 1; /* Permet à la liste de prendre l'espace restant */
+}
+
+.features-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+/* On utilise un petit emoji check devant chaque élément de la liste */
+.features-list li::before {
+    content: "✓ ";
+    color: #27ae60; /* Vert pour valider */
+    font-weight: bold;
+}
+
+.btn-pricing {
+    width: 100%; /* Le bouton prend toute la largeur de la carte */
+    margin-top: auto; /* S'assure que le bouton reste collé en bas */
+}
