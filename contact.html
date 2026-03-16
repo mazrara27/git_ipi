@@ -17,13 +17,48 @@
     <main>
       <section>
         <h1>Me Contacter</h1>
-        <h2>Informations de contact</h2>
-        <p>Vous souhaitez me poser une question ou discuter d'un projet ?</p>
+        <h2>Envoyez-moi un message</h2>
         <p>
-          Pour le moment, vous pouvez me joindre directement à l'adresse e-mail
-          suivante : <strong class="data-email">...</strong>.
+          Remplissez le formulaire ci-dessous pour me contacter ou discuter d'un
+          projet.
         </p>
-        <p>Je m'efforce de répondre dans les plus brefs délais.</p>
+
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="nom">Votre Nom :</label>
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              required
+              placeholder="Jean Dupont"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Votre Email :</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="jean@exemple.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Votre Message :</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Bonjour, j'aimerais vous parler de..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Envoyer le message</button>
+        </form>
       </section>
     </main>
 
